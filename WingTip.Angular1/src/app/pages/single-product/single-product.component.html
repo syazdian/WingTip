@@ -1,0 +1,27 @@
+<hr class="hr">
+
+
+<section class="jumbotron text-center">
+  <div class="container" *ngIf="product">
+    <h1>{{product.productName}}</h1>
+
+
+    <img src="https://localhost:44345/images/{{product.imagePath}}" width="400px" class="img-fluid img-thumbnail"
+      onerror="this.onerror=null; this.src='https://localhost:44345/images/error.png'" />
+    <div class="jombotron">
+      <h2>Description:</h2>
+      <p>{{product.description}}<p>
+          <h2>Price:</h2>
+          <p>$ {{product.unitPrice}}<p>
+    </div>
+    <button routerLink="/product" class="btn btn-primary my-2">Back to product list</button>
+
+    <button class="btn btn-info" [swal]="{title: product.productName + ' added to cart'}"
+      (click)="addToCart(product.productID)">ADD TO
+      CART</button>
+
+
+
+    <button class="btn btn-success" (click)="checkOut()">CHECK OUT</button>
+  </div>
+</section>

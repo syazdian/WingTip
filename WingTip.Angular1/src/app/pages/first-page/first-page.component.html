@@ -1,0 +1,94 @@
+<h1>{{titlepage}}</h1>
+<br>
+<div *ngIf=isFirstPage class="jombotron">
+
+  <div class="title">
+    <h3>Wingtip Toys can help you find the perfect gift</h3>
+  </div>
+  <p>
+    We're all about transportation toys. You can order
+    any of our toys today. Each toy listing has detailed
+    information to help you choose the right toy.
+  </p>
+</div>
+
+<hr class="hr">
+
+
+<div class="row">
+  <div class="col-lg-3 mb-5">
+
+    <app-category></app-category>
+  </div>
+  <!-- /.col-lg-3 -->
+  <div class="col-lg-8 mb-5">
+    <div class="row">
+      <app-cards *ngFor="let item of prodList" [product]="item" class="col-3 mb-3"></app-cards>
+
+    </div>
+
+
+
+  </div>
+  <!-- /.col-lg-9 -->
+</div>
+
+
+<!-- <table>
+    <tr>
+        <td style="width: 30%;vertical-align:top;">
+           
+        </td>
+        <td>
+            <table>
+                <tr>
+                    <td>
+                        <img border="1" height="75" src="Assets/carconvert.png" width="100">
+                    </td>
+                    <td>Convertible Car
+            <br>
+                        <span class="ProductPrice">
+                            <strong>Price:</strong>
+                            $22.50</span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <img border="1" height="75" src="Assets/carearly.png" width="100">
+                    </td>
+                    <td>Old-time Car
+            <br>
+                        <span class="ProductPrice">
+                            <strong>Price:</strong>
+                            $15.95</span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <img border="1" height="75" src="Assets/carfast.png" width="100">
+                    </td>
+                    <td>Fast Car
+            <br>
+                        <span class="ProductPrice">
+                            <strong>Price:</strong>
+                            $32.99</span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <img border="1" height="75" src="Assets/carfaster.png" width="100">
+                    </td>
+                    <td>Super Fast Car
+            <br>
+                        <span class="ProductPrice">
+                            <strong>Price:</strong>
+                            $8.95</span>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table> -->

@@ -1,0 +1,6 @@
+<h2 class="my-4 sidebar-heading">Category</h2>
+<div class='list-group' *ngIf='categoryList !== null && categoryList.length'>
+  <a *ngFor="let item of categoryList" routerLink="/product/category/{{item.categoryID}}" class="list-group-item">
+    {{item.categoryName}}
+  </a>
+</div>

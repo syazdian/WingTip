@@ -1,0 +1,22 @@
+<form [formGroup]="searchForm" (ngSubmit)="onSubmit()">
+  <div class=" form row input-group m-5">
+    <div class="col-8 ">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search Title/Description/Category ..."
+        aria-label="Search" id="searchText" formControlName="searchText" name="searchText" />
+      <ng-container
+        *ngIf="searchForm.controls.searchText.invalid && (searchForm.controls.searchText.dirty || searchForm.controls.searchText.touched)">
+        <p class="text-danger" *ngIf="searchForm.controls.searchText.errors?.minlength">
+          Search phrase must be at least 2 characters.
+        </p>
+      </ng-container>
+    </div>
+
+    <span class="input-group-btn  col-4 ">
+
+      <button class="btn btn-success" [disabled]="searchForm.invalid" type="submit">
+        Search
+      </button>
+    </span>
+
+  </div>
+</form>

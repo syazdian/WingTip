@@ -1,0 +1,26 @@
+<div class="col-12 table-responsive">
+  <table class="table table-bordered table-striped table-hover table-sm table-dark">
+    <tr>
+      <th>Id</th>
+      <th>Name</th>
+      <th>Price</th>
+      <th>Count</th>
+      <th>SubTotal</th>
+    </tr>
+
+    <tr *ngFor="let item of cart; let rowIndex = index;">
+      <td>{{ item.productId }}</td>
+      <td>{{ item.productName }}</td>
+      <td>${{ item.unitPrice }}</td>
+      <td>{{ item.quantity }}</td>
+      <td>${{  item.unitPrice *  item.quantity}}</td>
+    </tr>
+
+    <tr>
+      <td colspan="4">Total</td>
+      <td *ngIf="cart">${{ getTotal() }}</td>
+    </tr>
+
+  </table>
+
+</div>

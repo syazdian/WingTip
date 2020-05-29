@@ -1,0 +1,126 @@
+<app-shopping-cart></app-shopping-cart>
+
+<hr class="hr">
+<form [formGroup]="registerForm" (ngSubmit)="onSubmit()" class="needs-validation" novalidate>
+  <div class="row">
+    <div class="col-md-6 mb-3">
+      <label for="firstName">First name</label>
+      <input type="text" class="form-control" id="firstName" formControlName="firstName">
+      <ng-container *ngIf="registerForm.controls.firstName.invalid && 
+      (registerForm.controls.firstName.dirty || registerForm.controls.firstName.touched)">
+        <p class="text-danger" *ngIf="registerForm.controls.firstName.errors?.required">
+          Please Fill First Name.
+        </p>
+      </ng-container>
+    </div>
+    <div class="col-md-6 mb-3">
+      <label for="lastName">Last name</label>
+      <input type="text" class="form-control" id="lastName" formControlName="lastName">
+      <ng-container *ngIf="registerForm.controls.lastName.invalid && 
+      (registerForm.controls.lastName.dirty || registerForm.controls.lastName.touched)">
+        <p class="text-danger" *ngIf="registerForm.controls.lastName.errors?.required">
+          Please Fill Last name.
+        </p>
+      </ng-container>
+    </div>
+  </div>
+
+  <div class="row">
+
+    <div class="col-md-6 mb-3">
+      <label for="username">Username</label>
+      <input type="text" class="form-control" id="username" formControlName="username">
+      <ng-container *ngIf="registerForm.controls.username.invalid && 
+      (registerForm.controls.username.dirty || registerForm.controls.username.touched)">
+        <p class="text-danger" *ngIf="registerForm.controls.username.errors?.required">
+          Please Fill username.
+        </p>Username
+      </ng-container>
+    </div>
+
+    <div class="col-md-6 mb-3">
+      <label for="email">Email</label>
+      <input type="email" class="form-control" id="username" formControlName="email">
+      <ng-container *ngIf="registerForm.controls.email.invalid && 
+      (registerForm.controls.email.dirty || registerForm.controls.email.touched)">
+        <p class="text-danger" *ngIf="registerForm.controls.email.errors?.required">
+          Please Fill Email.
+        </p>
+        <p class="text-danger" *ngIf="registerForm.controls.email.errors?.email">
+          Please enter a valid Email address.
+        </p>
+
+      </ng-container>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6 mb-3">
+      <label for="Address">Address</label>
+      <input type="text" class="form-control" id="address" formControlName="address">
+
+      <ng-container *ngIf="registerForm.controls.address.invalid && 
+        (registerForm.controls.address.dirty || registerForm.controls.address.touched)">
+        <p class="text-danger" *ngIf="registerForm.controls.address.errors?.required">
+          Please Fill Address.
+        </p>
+      </ng-container>
+    </div>
+
+    <div class="col-md-3 mb-3">
+      <label for="city">City</label>
+      <input type="text" class="form-control" id="city" formControlName="city">
+      <ng-container *ngIf="registerForm.controls.city.invalid && 
+      (registerForm.controls.city.dirty || registerForm.controls.city.touched)">
+        <p class="text-danger" *ngIf="registerForm.controls.city.errors?.required">
+          Please Fill City.
+        </p>
+      </ng-container>
+    </div>
+    <div class="col-md-3 mb-3">
+      <label for="state">State</label>
+      <input type="text" class="form-control" id="state" formControlName="state">
+      <ng-container *ngIf="registerForm.controls.state.invalid && 
+      (registerForm.controls.state.dirty || registerForm.controls.state.touched)">
+        <p class="text-danger" *ngIf="registerForm.controls.state.errors?.required">
+          Please Fill State.
+        </p>
+      </ng-container>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6 mb-3">
+      <label for="phone">Phone</label>
+      <input type="tel" class="form-control" id="phone" formControlName="phone">
+      <ng-container *ngIf="registerForm.controls.phone.invalid && 
+      (registerForm.controls.phone.dirty || registerForm.controls.phone.touched)">
+        <p class="text-danger" *ngIf="registerForm.controls.phone.errors?.required">
+          Please Fill Phone.
+        </p>
+      </ng-container>
+    </div>
+    <div class="col-md-3 mb-3">
+      <label for="postalCode">PostalCode</label>
+      <input type="text" class="form-control" id="postalCode" formControlName="postalCode">
+      <ng-container *ngIf="registerForm.controls.postalCode.invalid && 
+      (registerForm.controls.postalCode.dirty || registerForm.controls.postalCode.touched)">
+        <p class="text-danger" *ngIf="registerForm.controls.postalCode.errors?.required">
+          Please Fill PostalCode.
+        </p>
+      </ng-container>
+    </div>
+    <div class="col-md-3 mb-3">
+      <label for="country">Country</label>
+      <input type="text" class="form-control" id="country" formControlName="country">
+      <ng-container *ngIf="registerForm.controls.country.invalid && 
+      (registerForm.controls.country.dirty || registerForm.controls.country.touched)">
+        <p class="text-danger" *ngIf="registerForm.controls.country.errors?.required">
+          Please Fill Country.
+        </p>
+      </ng-container>
+    </div>
+  </div>
+
+  <hr class="mb-4">
+  <button [disabled]="registerForm.invalid" class="col-3 btn btn-primary btn-lg btn-block" type="submit">Save</button>
+  <hr class="mb-4">
+</form>
