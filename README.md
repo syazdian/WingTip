@@ -19,9 +19,10 @@ and update the ConnectionString
 3- Run the WingTip.Web project in visual Studio, with IIS it should run on the following port and address:
 https://localhost:44345/product
 
-4- open WingTip.Angular project and run ng serve
+4- open WingTip.Angular project and in the Terminal first run "npm i" to install the "node_module" folder
+5- run "ng serve" and open "http://localhost:4200/"
 
-They should work fine!
+Enjoy!
 
 =============================================
 
