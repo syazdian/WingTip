@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\WingTipApi.Common\WingTipApi.Common.csproj" />
+    <ProjectReference Include="..\WingTipApi.DAL\WingTipApi.DAL.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,12 @@
+C:\Users\Sharif\Source\Repos\WingTipApi.Web\WingTipApi.DAL\bin\Debug\netcoreapp3.1\WingTipApi.DAL.deps.json
+C:\Users\Sharif\Source\Repos\WingTipApi.Web\WingTipApi.DAL\bin\Debug\netcoreapp3.1\WingTipApi.DAL.dll
+C:\Users\Sharif\Source\Repos\WingTipApi.Web\WingTipApi.DAL\obj\Debug\netcoreapp3.1\WingTipApi.DAL.csprojAssemblyReference.cache
+C:\Users\Sharif\Source\Repos\WingTipApi.Web\WingTipApi.DAL\obj\Debug\netcoreapp3.1\WingTipApi.DAL.AssemblyInfoInputs.cache
+C:\Users\Sharif\Source\Repos\WingTipApi.Web\WingTipApi.DAL\obj\Debug\netcoreapp3.1\WingTipApi.DAL.AssemblyInfo.cs
+C:\Users\Sharif\Source\Repos\WingTipApi.Web\WingTipApi.DAL\obj\Debug\netcoreapp3.1\WingTipApi.DAL.csproj.CoreCompileInputs.cache
+C:\Users\Sharif\Source\Repos\WingTipApi.Web\WingTipApi.DAL\bin\Debug\netcoreapp3.1\WingTipApi.Common.dll
+C:\Users\Sharif\Source\Repos\WingTipApi.Web\WingTipApi.DAL\bin\Debug\netcoreapp3.1\WingTipApi.Common.pdb
+C:\Users\Sharif\Source\Repos\WingTipApi.Web\WingTipApi.DAL\obj\Debug\netcoreapp3.1\WingTipApi.DAL.csproj.CopyComplete
+C:\Users\Sharif\Source\Repos\WingTipApi.Web\WingTipApi.DAL\bin\Debug\netcoreapp3.1\WingTipApi.DAL.pdb
+C:\Users\Sharif\Source\Repos\WingTipApi.Web\WingTipApi.DAL\obj\Debug\netcoreapp3.1\WingTipApi.DAL.dll
+C:\Users\Sharif\Source\Repos\WingTipApi.Web\WingTipApi.DAL\obj\Debug\netcoreapp3.1\WingTipApi.DAL.pdb

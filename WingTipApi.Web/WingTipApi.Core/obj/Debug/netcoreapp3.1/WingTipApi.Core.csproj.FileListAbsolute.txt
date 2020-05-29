@@ -1,0 +1,14 @@
+C:\Users\Sharif\Source\Repos\WingTipApi.Web\WingTipApi.Core\obj\Debug\netcoreapp3.1\WingTipApi.Core.csprojAssemblyReference.cache
+C:\Users\Sharif\Source\Repos\WingTipApi.Web\WingTipApi.Core\obj\Debug\netcoreapp3.1\WingTipApi.Core.AssemblyInfoInputs.cache
+C:\Users\Sharif\Source\Repos\WingTipApi.Web\WingTipApi.Core\obj\Debug\netcoreapp3.1\WingTipApi.Core.AssemblyInfo.cs
+C:\Users\Sharif\Source\Repos\WingTipApi.Web\WingTipApi.Core\obj\Debug\netcoreapp3.1\WingTipApi.Core.csproj.CoreCompileInputs.cache
+C:\Users\Sharif\Source\Repos\WingTipApi.Web\WingTipApi.Core\bin\Debug\netcoreapp3.1\WingTipApi.Core.deps.json
+C:\Users\Sharif\Source\Repos\WingTipApi.Web\WingTipApi.Core\bin\Debug\netcoreapp3.1\WingTipApi.Core.dll
+C:\Users\Sharif\Source\Repos\WingTipApi.Web\WingTipApi.Core\bin\Debug\netcoreapp3.1\WingTipApi.Core.pdb
+C:\Users\Sharif\Source\Repos\WingTipApi.Web\WingTipApi.Core\bin\Debug\netcoreapp3.1\WingTipApi.Common.dll
+C:\Users\Sharif\Source\Repos\WingTipApi.Web\WingTipApi.Core\bin\Debug\netcoreapp3.1\WingTipApi.DAL.dll
+C:\Users\Sharif\Source\Repos\WingTipApi.Web\WingTipApi.Core\bin\Debug\netcoreapp3.1\WingTipApi.Common.pdb
+C:\Users\Sharif\Source\Repos\WingTipApi.Web\WingTipApi.Core\bin\Debug\netcoreapp3.1\WingTipApi.DAL.pdb
+C:\Users\Sharif\Source\Repos\WingTipApi.Web\WingTipApi.Core\obj\Debug\netcoreapp3.1\WingTipApi.Core.csproj.CopyComplete
+C:\Users\Sharif\Source\Repos\WingTipApi.Web\WingTipApi.Core\obj\Debug\netcoreapp3.1\WingTipApi.Core.dll
+C:\Users\Sharif\Source\Repos\WingTipApi.Web\WingTipApi.Core\obj\Debug\netcoreapp3.1\WingTipApi.Core.pdb

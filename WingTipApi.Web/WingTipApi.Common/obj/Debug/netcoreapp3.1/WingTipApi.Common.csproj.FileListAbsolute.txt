@@ -1,0 +1,9 @@
+C:\Users\Sharif\Source\Repos\WingTipApi.Web\WingTipApi.Common\bin\Debug\netcoreapp3.1\WingTipApi.Common.deps.json
+C:\Users\Sharif\Source\Repos\WingTipApi.Web\WingTipApi.Common\bin\Debug\netcoreapp3.1\WingTipApi.Common.dll
+C:\Users\Sharif\Source\Repos\WingTipApi.Web\WingTipApi.Common\bin\Debug\netcoreapp3.1\WingTipApi.Common.pdb
+C:\Users\Sharif\Source\Repos\WingTipApi.Web\WingTipApi.Common\obj\Debug\netcoreapp3.1\WingTipApi.Common.AssemblyInfoInputs.cache
+C:\Users\Sharif\Source\Repos\WingTipApi.Web\WingTipApi.Common\obj\Debug\netcoreapp3.1\WingTipApi.Common.AssemblyInfo.cs
+C:\Users\Sharif\Source\Repos\WingTipApi.Web\WingTipApi.Common\obj\Debug\netcoreapp3.1\WingTipApi.Common.csproj.CoreCompileInputs.cache
+C:\Users\Sharif\Source\Repos\WingTipApi.Web\WingTipApi.Common\obj\Debug\netcoreapp3.1\WingTipApi.Common.dll
+C:\Users\Sharif\Source\Repos\WingTipApi.Web\WingTipApi.Common\obj\Debug\netcoreapp3.1\WingTipApi.Common.pdb
+C:\Users\Sharif\Source\Repos\WingTipApi.Web\WingTipApi.Common\obj\Debug\netcoreapp3.1\WingTipApi.Common.csprojAssemblyReference.cache
