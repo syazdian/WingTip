@@ -96,6 +96,9 @@
         <p class="text-danger" *ngIf="registerForm.controls.phone.errors?.required">
           Please Fill Phone.
         </p>
+        <p class="text-danger" *ngIf="registerForm.controls.phone.errors?.maxlength">
+          Phone number shouldn't be longer than 24 characters.
+        </p>
       </ng-container>
     </div>
     <div class="col-md-3 mb-3">
@@ -105,6 +108,9 @@
       (registerForm.controls.postalCode.dirty || registerForm.controls.postalCode.touched)">
         <p class="text-danger" *ngIf="registerForm.controls.postalCode.errors?.required">
           Please Fill PostalCode.
+        </p>
+        <p class="text-danger" *ngIf="registerForm.controls.postalCode.errors?.maxlength">
+          Postal code shouldn't be longer than 10 characters.
         </p>
       </ng-container>
     </div>
