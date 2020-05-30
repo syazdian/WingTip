@@ -1,4 +1,5 @@
-﻿using Dapper;
+using Dapper;
+using System.Transactions;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
@@ -89,46 +90,64 @@ namespace WingTipApi.DAL.Repository
         }
 
 
-
         public async Task<bool> RegisterCart(OrderInsertDto order)
         {
+            //TODO: LENGTH OF PARAMETERS SHOULD BE CHECKED
             try
             {
+                #region GET CURRENT SHOPPING CART
+                var currentCart = GetShoppingCart(order.CartId).Result;
+                decimal totalCost = 0;
+                foreach (var item in currentCart)
+                {
+                    totalCost += item.Quantity * item.UnitPrice;
+                }
+                #endregion
+
+
                 using (var connection = new SqlConnection(_conString))
                 {
-                    #region GET CURRENT SHOPPING CART
-                    var currentCart = GetShoppingCart(order.CartId).Result;
-                    decimal totalCost = 0;
-                    foreach (var item in currentCart)
-                    {
-                        totalCost += item.Quantity * item.UnitPrice;
-                    }
-                    #endregion
 
-                    #region INSTER IN ORDERS TABLE
-                    var sql = "INSERT INTO [Orders] ([OrderDate],[Username],[FirstName],[LastName],[Address],[City],[State],[PostalCode] " +
-                       ",[Country] ,[Phone] ,[Email],[Total],[HasBeenShipped]) " +
-                       $" VALUES ('{DateTime.Now}' , '{order.Username}' , '{order.FirstName}' , '{order.LastName}' , '{order.Address}' , '{order.City}' " +
-                       $" , '{order.State}' , '{order.PostalCode}' , '{order.Country}' , '{order.Phone}' , '{order.Email}', '{totalCost}', 'false') " +
-                       " SELECT CAST(SCOPE_IDENTITY() as int);";
                     connection.Open();
-                    var OrderId = await connection.QuerySingleAsync<int>(sql);
-                    #endregion
-
-                    #region INSERT IN ORDER DETAILS
-                    string firstPartInsert = "INSERT INTO [OrderDetails]([OrderId],[Username] ,[ProductId] ,[Quantity],[UnitPrice])  VALUES";
-                    StringBuilder sqlInsert = new StringBuilder(firstPartInsert);
-                    foreach (var itemInCart in currentCart)
+                    using (var transaction = connection.BeginTransaction())
                     {
-                        sqlInsert.Append($"('{OrderId}' , '{order.Username}' , '{itemInCart.ProductId}' , '{itemInCart.Quantity}' , '{itemInCart.UnitPrice}') ,");
-                    }
+                        try
+                        {
+                            #region INSTER IN ORDERS TABLE
+                            var sql = "INSERT INTO [Orders] ([OrderDate],[Username],[FirstName],[LastName],[Address],[City],[State],[PostalCode] " +
+                             ",[Country] ,[Phone] ,[Email],[Total],[HasBeenShipped]) " +
+                             $" VALUES ('{DateTime.Now}' , '{order.Username}' , '{order.FirstName}' , '{order.LastName}' , '{order.Address}' , '{order.City}' " +
+                             $" , '{order.State}' , '{order.PostalCode}' , '{order.Country}' , '{order.Phone}' , '{order.Email}', '{totalCost}', 'false') " +
+                             " SELECT CAST(SCOPE_IDENTITY() as int);";
+                            var OrderId = connection.QuerySingleOrDefault<int>(sql, transaction: transaction);
+                            #endregion
 
-                    sqlInsert.Length--;
-                    await connection.QuerySingleAsync<int>(sqlInsert.ToString());
-                    #endregion
+                            #region INSERT IN ORDER DETAILS
+                            string firstPartInsert = "INSERT INTO [OrderDetails]([OrderId],[Username] ,[ProductId] ,[Quantity],[UnitPrice])  VALUES";
+                            StringBuilder sqlInsert = new StringBuilder(firstPartInsert);
+                            foreach (var itemInCart in currentCart)
+                            {
+                                sqlInsert.Append($"('{OrderId}' , '{order.Username}' , '{itemInCart.ProductId}' , '{itemInCart.Quantity}' , '{itemInCart.UnitPrice}') ,");
+                            }
+
+                            sqlInsert.Length--;
+                            connection.QuerySingleOrDefault<int>(sqlInsert.ToString(), transaction: transaction);
+                            #endregion
+
+                            transaction.Commit();
+                        }
+                        catch (Exception e)
+                        {
+                            transaction.Rollback();
+                            throw e;
+                        }
+
+
+                    }
                 }
                 return true;
             }
+
             catch (Exception ex)
             {
                 throw ex;
