@@ -21,17 +21,17 @@ export class OrderComponent implements OnInit {
     }
 
 
-    this.registerForm = new FormGroup({
+     this.registerForm = new FormGroup({
       username: new FormControl(null, Validators.required),
-      firstName: new FormControl(null, Validators.required),
-      lastName: new FormControl(null, Validators.required),
-      address: new FormControl(null, Validators.required),
-      city: new FormControl(null, Validators.required),
-      state: new FormControl(null, Validators.required),
-      postalCode: new FormControl(null, Validators.required),
-      phone: new FormControl(null, [Validators.required,]),
+      firstName: new FormControl(null, [Validators.required, Validators.maxLength(160)]),
+      lastName: new FormControl(null, [Validators.required, Validators.maxLength(160)]),
+      address: new FormControl(null, [Validators.required, Validators.maxLength(70)]),
+      city: new FormControl(null, [Validators.required, Validators.maxLength(40)]),
+      state: new FormControl(null, [Validators.required, Validators.maxLength(40)]),
+      postalCode: new FormControl(null, [Validators.required, Validators.maxLength(10)]),
+      phone: new FormControl(null, [Validators.required, Validators.maxLength(24)]),
       email: new FormControl(null, [Validators.email, Validators.required]),
-      country: new FormControl(null, Validators.required),
+      country: new FormControl(null, [Validators.required, Validators.maxLength(40)]),
 
     });
   }
