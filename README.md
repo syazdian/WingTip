@@ -11,6 +11,7 @@ Extra Library used in Angular:
 =============================================
 
 For running the project:
+
 1- Be sure you SQL Server is running and local machine already has Wingtiptoys Database 
 
 2- If your SQL SERVER credentials is not Local machine (.), Open the WingTip.Web project  in visual Studio, and go to "appsetting.json"
@@ -20,6 +21,7 @@ and update the ConnectionString
 https://localhost:44345/product
 
 4- open WingTip.Angular project and in the Terminal first run "npm i" to install the "node_module" folder
+
 5- run "ng serve" and open "http://localhost:4200/"
 
 Enjoy!
